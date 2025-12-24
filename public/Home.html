@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/css/home.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CSrestaurant</title>
 </head>
-<body>
-    <script>fetch("/view/partials/nav.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("nav").innerHTML = data;
-            });
+
+<body class="">
+    <div id="nav"></div>
+    <script>
+    fetch("/views/partials/nav.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("nav").innerHTML = data;
+        });
     </script>
-    <main class="p-6 text-white">
-        <h1>Welcome</h1>
+
+    <main class="min-h-screen p-2">
+        <div class="w-[50%] min-h-screen flex items-center justify-center bg-blue-500 rounded-lg">
+            
+        </div>
     </main>
+
 </body>
 </html>
