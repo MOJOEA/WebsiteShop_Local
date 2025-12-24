@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <script>fetch("/view/partials/nav.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("nav").innerHTML = data;
+            });
+    </script>
+    <main class="p-6 text-white">
+        <h1>Welcome</h1>
+    </main>
+</body>
+</html>
