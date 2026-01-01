@@ -130,13 +130,12 @@ function renderMyfood() {
     });
 }
 
-
-
 function addMYfood(food){
     if (Myfood.some(f => f.name === food.name)) {
         let index = Myfood.findIndex(f => f.name === food.name);
+        let price = foodList.find(f => f.name === food.name).price;
         Myfood[index].count += 1
-        Myfood[index].price += food.price;
+        Myfood[index].price += price;
     }else{
         Myfood.push({...food, count: 1});
     }
@@ -150,8 +149,9 @@ function ClearMYfood(){
 
 function deleteMYfood(i){
     if(Myfood[i].count > 1){
+        let price = foodList.find(f => f.name === Myfood[i].name).price;
         Myfood[i].count -= 1;
-        Myfood[i].price -= foodList.find(f => f.name === Myfood[i].name).price;
+        Myfood[i].price -= price;
     }else{
         Myfood.splice(i, 1);
     }
