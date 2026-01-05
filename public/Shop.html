@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./Backend.js"></script>
+    <title>CSrestaurant</title>
+</head>
+<body>
+    <div id="nav"></div>
+    <script>nav()</script>
+    <main class="h-screen w-full flex flex-col overflow-y-auto bg-gray-200 justify-center items-center">
+        <div class="bg-white h-[95%] w-[95%] rounded-lg shadow-[0_0_30px_#ccc] flex flex-row p-2 space-x-2">
+            <div class="bg-blue-600 h-full w-[50%] rounded-lg flex flex-col items-center justify-start p-2 space-y-2">
+                <h1 class="text-xl font-bold text-white">Shop Page</h1>
+                <div id="shop-menu" class="w-full h-full bg-blue-500 rounded-lg flex-col items-center justify-start p-2 space-y-2 overflow-y-auto">
+                    <!-- ======================================================================================================================================================= -->
+                    <div class="bg-blue-400 h-[180px] w-full rounded-lg flex flex-col space-y-2 p-2">
+                        <div class="bg-blue-300 h-[75%] w-full rounded-lg flex flex-row">                            
+                            <div class="bg-blue-200 h-full w-[25vh] rounded-lg"></div>
+                            <div class="bg-blue-200 h-full w-full ml-2 rounded-lg px-2">
+                                <h4 class="font-bold text-lg">Menu Name</h4>
+                                <p class="text-sm text-gray-800">
+                                    A deliciously prepared menu item made with fresh ingredients
+                                </p>
+                                <p class="text-sm mt-1">Price: <span class="font-semibold">80</span> THB</p>
+                            </div>
+                        </div>
+                        <button class="bg-blue-200 h-[25%] w-full rounded-lg hover:bg-blue-100 flex items-center justify-center font-bold text-white"> Add </button>
+                    </div>
+                    <!-- ======================================================================================================================================================= -->
+                    <!-- ======================================================================================================================================================= -->
+                </div>
+            </div>
+            <div class="bg-blue-600 h-full w-[50%] rounded-lg flex flex-col items-center justify-start p-2 space-y-2">
+                <h1 class="text-xl font-bold text-white">Shop Page</h1>
+                <div id="myFoodList" class="h-[50%] w-full bg-blue-500 rounded-lg flex-col items-center justify-start p-2 space-y-2 overflow-y-auto">
+                    <div class="bg-blue-400 h-[120px] w-full rounded-lg">
+                        <!-- ======================================================================================================================================================= -->
+                         <div class="bg-blue-400 h-[180px] w-full rounded-lg flex flex-col space-y-2 p-2">
+                            <div class="bg-blue-300 h-[75%] w-full rounded-lg flex flex-row">                            
+                                <div class="bg-blue-200 h-full w-[25vh] rounded-lg"></div>
+                                <div class="bg-blue-200 h-full w-full ml-2 rounded-lg px-2">
+                                    <h4 class="font-bold text-lg">Menu Name</h4>
+                                    <p class="text-sm mt-1">Quantity: <span class="font-semibold">1</span></p>
+                                    <p class="text-sm mt-1">Price: <span class="font-semibold">80</span> THB</p>
+                                </div>
+                            </div>
+                            <div class="bg-blue-300 h-[25%] w-full flex flex-row space-x-2">
+                                <button class=" bg-blue-200 text-white px-4 py-2 rounded hover:bg-blue-100 w-[50%]">Add</button>
+                                <button class=" bg-blue-200 text-white px-4 py-2 rounded hover:bg-blue-100 w-[50%]">Add</button>
+                            </div>
+                        </div>
+                        <!-- ======================================================================================================================================================= -->
+                        <!-- ======================================================================================================================================================= -->
+                    </div>
+                </div>
+                <div class="bg-blue-500 h-[50%] w-full rounded-lg px-2 py-4 flex flex-col items-start justify-start text-white">
+                    <hr class="w-full mt-1 border-t-2 border-gray-800">
+                    <h3 class="text-base font-bold mt-2"> Total Items : <span id="totalItems">0</span></h3>
+                    <h3 class="text-base font-bold"> Total Product Types : <span id="totalTypes">0</span></h3>
+
+                    <hr class="w-full mt-3 border-t-2 border-gray-800">
+                    <h3 class="text-base font-bold mt-2"> Subtotal : <span id="totalsub">0</span> THB</h3>
+                    <h3 class="text-base font-bold">Grand Total : <span id="totalgrand">0</span> THB</h3>
+
+                    <hr class="w-full mt-3 border-t-2 border-gray-800">
+                    <button class="mt-2 bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-400 w-full">Payment methods</button>
+                    <button class="mt-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-400 w-full">Checkout</button>
+                    <button onclick="ClearMYfood()" class="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-400 w-full">Clear</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
