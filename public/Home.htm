@@ -4,76 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./practice.js"></script>
+    <script src="./Backend.js"></script>
     <title>CSrestaurant</title>
 </head>
-
-<body class="">
+<body>
     <div id="nav"></div>
-    <script>
-    fetch("/views/partials/nav.html")
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("nav").innerHTML = data;
-        });
-    </script>
-
-    <main class="h-auto w-full bg-gray-100 p-4 flex flex-col items-center lg:h-screen">
-        <div class="w-full max-w-[75%] min-w-[425px] h-[160vh] bg-white rounded-lg shadow-[0_0_30px_#ccc] flex flex-col p-3 space-y-3 lg:flex-row lg:space-y-0 lg:space-x-3 lg:h-[100%]">
-            <div class="bg-gray-200 w-[50%] h-[40%] min-w-[400px] rounded-lg flex flex-col items-center justify-start gap-2 sm:h-[100%]">
-                <h1 class="text-2xl font-bold mb-4 text-gray-800 font-bold mt-4">Complete Menu</h1>
-                <div id="foodList" class="w-[95%] h-[88%] bg-blue-100 flex flex-col items-center justify-start overflow-y-auto"></div>
-            </div>
-
-            <div class="bg-gray-200 w-[50%] h-[59%] min-w-[400px] rounded-lg flex flex-col items-center justify-start gap-2 lg:h-[100%]">
-                <h1 class="text-2xl font-bold mb-4 text-gray-800 font-bold mt-4">Order Cart</h1>
-                <div id="Orderlist" class="bg-blue-100 w-[95%] h-[36%] flex flex-col items-center justify-start overflow-y-auto">
-
-                    <div class="bg-white w-full h-[200px] rounded-lg mb-2 p-2">
-                        <div class="flex flex-row w-full space-x-2">
-                            <div class="bg-gray-300 w-[30%] h-[130px] rounded-lg mb-2 "></div>
-                            <div class="w-[70%] h-[130px] rounded-lg mb-2">
+    <script>nav()</script>
+    <main class="h-screen w-full flex flex-col overflow-y-auto bg-gray-200 justify-center items-center">
+        <div class="bg-green-400 h-[95%] w-[65%] rounded-lg shadow-[0_0_30px_#ccc] flex flex-row p-2 space-x-2">
+            <div class="bg-gray-900 h-full w-[50%] rounded-lg flex flex-col items-center justify-start p-2 space-y-2">
+                <h1 class="text-xl font-bold text-white">Shop Page</h1>
+                <div id="shop-menu" class="w-full h-full bg-gray-700 rounded-lg flex-col items-center justify-start p-2 space-y-2 overflow-y-auto">
+                    <!-- ======================================================================================================================================================= -->
+                    <div class="bg-blue-400 h-[180px] w-full rounded-lg flex flex-col space-y-2 p-2">
+                        <div class="bg-blue-300 h-[75%] w-full rounded-lg flex flex-row">                            
+                            <div class="h-full w-[25vh] rounded-lg bg-cover bg-center" style="background-image: url('img/KhaoPad.jpg')  "></div>
+                            <div class="bg-blue-200 h-full w-full ml-2 rounded-lg px-2">
                                 <h4 class="font-bold text-lg">Menu Name</h4>
-                                <p class="text-sm text-gray-600">
-                                    A deliciously prepared menu item made with fresh ingredients, carefully cooked to bring out rich flavors and a satisfying taste in every bite.
+                                <p class="text-sm text-gray-800">
+                                    A deliciously prepared menu item made with fresh ingredients
                                 </p>
                                 <p class="text-sm mt-1">Price: <span class="font-semibold">80</span> THB</p>
                             </div>
                         </div>
-                        <div class="flex space-x-2">
-                            <button class="mt-1 bg-gray-300 text-white px-4 py-2 rounded hover:bg-green-400 w-[50%]">Add</button>
-                            <button class="mt-1 bg-gray-300 text-white px-4 py-2 rounded hover:bg-green-400 w-[50%]">Add</button>
-                        </div>
+                        <button class="bg-blue-200 h-[25%] w-full rounded-lg hover:bg-blue-100 flex items-center justify-center font-bold text-white"> Add </button>
                     </div>
-
-                    <div class="bg-white w-full h-[200px] rounded-lg mb-2 p-2">
-                        <div class="flex flex-row w-full space-x-2">
-                            <div class="bg-gray-300 w-[30%] h-[130px] rounded-lg mb-2 "></div>
-                            <div class="w-[70%] h-[130px] rounded-lg mb-2">
-                                <h4 class="font-bold text-lg">Menu Name</h4>
-                                <p class="text-sm text-gray-600">
-                                    A deliciously prepared menu item made with fresh ingredients, carefully cooked to bring out rich flavors and a satisfying taste in every bite.
-                                </p>
-                                <p class="text-sm mt-1">Price: <span class="font-semibold">80</span> THB</p>
-                            </div>
-                        </div>
-                        <div class="flex space-x-2">
-                            <button class="mt-1 bg-gray-300 text-white px-4 py-2 rounded hover:bg-green-400 w-[50%]">Add</button>
-                            <button class="mt-1 bg-gray-300 text-white px-4 py-2 rounded hover:bg-green-400 w-[50%]">Add</button>
-                        </div>
-                    </div>
-                    
+                    <!-- ======================================================================================================================================================= -->
+                    <!-- ======================================================================================================================================================= -->
                 </div>
-                <div class="w-[95%] h-[49%] bg-white flex flex-col items-start justify-start p-3 rounded-lg mt-1 lg:h-[50%]">
-                    <hr class="w-full mt-1 border-t-2 border-gray-800">
+            </div>
+            <div class="bg-gray-900 h-full w-[50%] rounded-lg flex flex-col items-center justify-start p-2 space-y-2">
+                <h1 class="text-xl font-bold text-white">Shop Page</h1>
+                <div id="myFoodList" class="h-[50%] w-full bg-gray-700 rounded-lg flex-col items-center justify-start p-2 space-y-2 overflow-y-auto">
+                <!-- ======================================================================================================================================================= -->
+                </div>
+                <div class="bg-gray-700 h-[50%] w-full rounded-lg px-2 py-4 flex flex-col items-start justify-start text-white">
+                    <hr class="w-full mt-1 border-t-2 border-white">
                     <h3 class="text-base font-bold mt-2"> Total Items : <span id="totalItems">0</span></h3>
-                    <h3 class="text-base font-bold mt-2"> Total Product Types : <span id="totalTypes">0</span></h3>
+                    <h3 class="text-base font-bold"> Total Product Types : <span id="totalTypes">0</span></h3>
 
-                    <hr class="w-full mt-3 border-t-2 border-gray-800">
-                    <h3 class="text-base font-bold mt-2"> Subtotal : <span id="subtotal">0</span> THB</h3>
-                    <h3 class="text-base font-bold mt-2">Grand Total : <span id="grandTotal">0</span> THB</h3>
+                    <hr class="w-full mt-3 border-t-2 border-white">
+                    <h3 class="text-base font-bold mt-2"> Subtotal : <span id="totalsub">0</span> THB</h3>
+                    <h3 class="text-base font-bold">Grand Total : <span id="totalgrand">0</span> THB</h3>
 
-                    <hr class="w-full mt-3 border-t-2 border-gray-800">
+                    <hr class="w-full mt-3 border-t-2 border-white">
                     <button class="mt-2 bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-400 w-full">Payment methods</button>
                     <button class="mt-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-400 w-full">Checkout</button>
                     <button onclick="ClearMYfood()" class="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-400 w-full">Clear</button>
