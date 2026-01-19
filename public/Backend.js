@@ -126,6 +126,11 @@ function calculateTotals() {
     document.getElementById("totalgrand").textContent = tax.toFixed(2);
 }
 
+function ClearMYfood() {
+    Myfood.splice(0, Myfood.length);
+    updateOrde();
+}
+
 function updateOrde() {
     renderMyfood();
     calculateTotals();

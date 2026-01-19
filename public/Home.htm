@@ -8,8 +8,19 @@
     <title>CSrestaurant</title>
 </head>
 <body>
-    <div id="nav"></div>
-    <script>nav()</script>
+    <nav class="flex justify-between bg-gray-900 p-4 sticky top-0">
+        <div class="flex-1">
+            <a href="/public/CEO.html" class="text-white text-lg font-bold">Foodcenter</a>
+        </div>
+        <div class="flex space-x-4">
+            <a href="/public/CEO.html" class="text-gray-500 hover:text-white">Home</a>
+            <a href="/public/from-Login.html" class="text-gray-500 hover:text-white">Login</a>
+            <a href="/public/from-Signin.html" class="text-gray-500 hover:text-white">Signin</a>
+            <a href="/public/from-Profile.html" class="text-gray-500 hover:text-white">Profile</a>
+            <a href="/public/from-Edit.html" class="text-gray-500 hover:text-white">Edit</a>
+        </div>
+    </nav>
+
     <main class="h-screen w-full flex flex-col overflow-y-auto bg-gray-200 justify-center items-center">
         <div class="bg-green-400 h-[95%] w-[65%] rounded-lg shadow-[0_0_30px_#ccc] flex flex-row p-2 space-x-2">
             <div class="bg-gray-900 h-full w-[50%] rounded-lg flex flex-col items-center justify-start p-2 space-y-2">
